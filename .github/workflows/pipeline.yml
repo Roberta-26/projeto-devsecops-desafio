@@ -43,7 +43,7 @@ jobs:
       - name: 📦 SCA - Grype
         run: 
            curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin"
-           grype dir:. --fail-on medium"
+           grype dir:. --fail-on medium
 
       # ✅ PASSO 6: Deploy (só roda se tudo passar)
       - name: 🌐 Configurar GitHub Pages
