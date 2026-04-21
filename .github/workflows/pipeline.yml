@@ -30,8 +30,8 @@ jobs:
           echo "Build OK!"
 
       # PASSO 3: Secrets Scanning com Gitleaks
-      - name: 🔑 Secrets Scanning
-      - uses:"gitleaks/gitleaks-action@v2"     
+      - name: 🔑 Secrets Scanning 
+      - uses: gitleaks/gitleaks-action@v2     
 
       # PASSO 4: SAST com Semgrep
       - name: 🔍 SAST - Semgrep
@@ -42,15 +42,15 @@ jobs:
       # PASSO 5: SCA com Grype
       - name: 📦 SCA - Grype
         run: 
-           curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin"
+           curl -sSfL https://raw.githubusercontent.com/anchore/grype/main/install.sh | sh -s -- -b /usr/local/bin
            grype dir:. --fail-on medium
 
       # ✅ PASSO 6: Deploy (só roda se tudo passar)
       - name: 🌐 Configurar GitHub Pages
         uses: actions/configure-pages@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          enablement: true
+           token: ${{ secrets.GITHUB_TOKEN }}
+           enablement: true
 
       - name: 📤 Upload para Produção
         uses: actions/upload-pages-artifact@v3
