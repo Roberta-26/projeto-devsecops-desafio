@@ -22,7 +22,7 @@ A pipeline está **incompleta**. Os steps de segurança precisam ser implementad
 - [ ] Deploy com **GitHub Pages**
 
 ## Como a pipeline funciona
-> **Substitua este bloco pela sua explicação após implementar a pipeline.**
+
 > Com a implementação do Gitleaks, para verificar todas as informações sensíveis (senhas, chaves...)
 > Com o SAST para ver se tem padrões, a SCA verificando as vulnerabilidades e bloqueando o deploy para não
 > seguir adiante , o Github Pages vrificando e só deixando publicar se todas as etapas anteriores forem concluídas.
