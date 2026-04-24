@@ -23,7 +23,9 @@ A pipeline está **incompleta**. Os steps de segurança precisam ser implementad
 
 ## Como a pipeline funciona
 > **Substitua este bloco pela sua explicação após implementar a pipeline.**
-> Descreva cada step, o que ele faz e por que ele é importante para a segurança.
+> Com a implementação do Gitleaks, para verificar todas as informações sensíveis (senhas, chaves...)
+> Com o SAST para ver se tem padrões, a SCA verificando as vulnerabilidades e bloqueando o deploy para não
+> seguir adiante , o Github Pages vrificando e só deixando publicar se todas as etapas anteriores forem concluídas.
 
 ## URL de Produção
 > https://roberta-26.github.io/projeto-devsecops-desafio/
